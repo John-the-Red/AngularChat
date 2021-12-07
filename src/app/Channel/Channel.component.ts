@@ -9,6 +9,9 @@ import { Post, ChannelService } from '../channel.service';
 })
 export class ChannelComponent implements OnInit {
 @Input() channel: string="";
+
+
+
   constructor(private channels: ChannelService) { }
 
   ngOnInit() {

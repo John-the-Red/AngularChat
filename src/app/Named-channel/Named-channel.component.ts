@@ -11,7 +11,7 @@ export class NamedChannelComponent implements OnInit {
 
   @Input() data:Post[] =[];
   
-
+  isEditing: boolean = false;
   constructor(private channel: ChannelService, private router: ActivatedRoute) {}
 
   ngOnInit() {
@@ -22,5 +22,7 @@ export class NamedChannelComponent implements OnInit {
       });
     });
   }
-
+  toggleEdit() {
+    this.isEditing = !this.isEditing;
+  }
 }

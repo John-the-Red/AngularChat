@@ -7,17 +7,23 @@ import { AppComponent } from './app.component';
 import { ChannelComponent } from './Channel/Channel.component';
 import { LandingComponent } from './Landing/Landing.component';
 import { NamedChannelComponent } from './Named-channel/Named-channel.component';
+import { ChannelEditComponent } from './Channel-Edit/Channel-Edit.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [			
     AppComponent,
       ChannelComponent,
       LandingComponent,
-      NamedChannelComponent
+      NamedChannelComponent,
+      ChannelEditComponent,
+      
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [ChannelService],
   bootstrap: [AppComponent]

@@ -1,0 +1,7 @@
+<form [formGroup]="postForm" (submit)="onSubmit()">
+  <label>username</label><br>
+  <input type="text" formControlName="username"><br>
+  <label>message</label><br>
+  <input type="text" formControlName="message"><br>
+  <input type="submit" [disabled]="!postForm.valid">
+</form>

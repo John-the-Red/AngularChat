@@ -1,3 +1,8 @@
+<button (click)="toggleEdit()">Toggle Editing</button><br>
+<div *ngIf="isEditing">
+    <app-Channel-Edit (onPostEvent)="toggleEdit()"></app-Channel-Edit>
+</div>
+
 <div class="channel">
   <div *ngFor= "let messages of data" class= "messages">
     <p>{{ messages.username }}: {{ messages.message}} </p>
